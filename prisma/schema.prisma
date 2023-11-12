@@ -41,11 +41,11 @@ model Account {
 }
 
 model Session {
-    id          String   @id @default(auto()) @map("_id") @db.ObjectId
-    User        User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
-    userId      String?  @db.ObjectId
-    sessionToke String   @unique
-    expires     DateTime
+    id           String   @id @default(auto()) @map("_id") @db.ObjectId
+    sessionToken String   @unique
+    userId       String   @db.ObjectId
+    expires      DateTime
+    user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model VerificationToken {

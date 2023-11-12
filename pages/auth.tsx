@@ -7,7 +7,6 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
 const Auth = () => {
-console.log(process.env.GITHUB_ID)
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -17,7 +16,7 @@ console.log(process.env.GITHUB_ID)
   const toggleVariant = useCallback(() => {
     setVariant((currentVariant) =>
       currentVariant === "login" ? "register" : "login"
-    );
+    ); 
   }, []);
 
   const login = useCallback(async () => {
