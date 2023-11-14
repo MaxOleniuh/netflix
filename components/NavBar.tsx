@@ -13,7 +13,7 @@ const NavBar = () => {
 
     const toggleMobileMenu = useCallback(() => {
         setShowMobileMenu((current) => !current);
-    }, [])
+    }, []) 
 
     const toggleAccountMenu = useCallback(() => {
         setShowAccountMenu((current) => !current);
