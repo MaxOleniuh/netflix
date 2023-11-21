@@ -59,7 +59,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
             <div
               className="
                         cursor-pointer absolute top-3 right-3 h-10 w-10 rounded-full bg-black 
-                        bg-opacity-70 flex items-center justify-center
+                        bg-opacity-70 flex items-center justify-center transition duration-300 hover:bg-zinc-900
                         "
               onClick={handleClose}
             >
@@ -76,16 +76,16 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
             </div>
           </div>
                 <div className="py-12 px-8">
-                      <p className="text-green-400 font-semibold text-lg">
+                      <p className="text-green-400 font-bold text-lg">
                         New
                       </p>
-                      <p className="text-white text-lg ">
+                      <p className="text-white text-lg font-semibold">
                           {data?.duration}
                       </p>
-                       <p className="text-white text-lg ">
+                       <p className="text-white text-lg mb-1">
                           {data?.genre}
                       </p>
-                       <p className="text-white text-lg ">
+                       <p className="text-zinc-200 text-lg">
                           {data?.description}
                       </p>
                </div>  
