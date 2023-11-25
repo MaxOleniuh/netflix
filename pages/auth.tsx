@@ -39,11 +39,11 @@ const Auth = () => {
  
   const login = useCallback(async () => {
     try {
-      signIn("credentials", {
+        await signIn("credentials", {
         email,
         password,
         redirect: false,
-        callbackUrl: "/profiles",
+        callbackUrl: "/",
       });
 
       router.push("/profiles")
@@ -59,7 +59,7 @@ const Auth = () => {
         name,
         password,
       });
-      
+
       login();
     } catch (error) {
       console.log(error);
