@@ -4,24 +4,6 @@ import Input from "@/components/Input";
 import { getSession, signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { NextPageContext } from "next";
-
-export async function getServerSideProps(context: NextPageContext) {
-  const session = await getSession(context);
-
-  if (session) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      }
-    }
-  }
-
-  return {
-    props: {}
-  }
-}
 
 const Auth = () => {
   const [email, setEmail] = useState("");
